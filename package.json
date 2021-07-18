@@ -1,0 +1,52 @@
+{
+  "name": "@opensoftweb/ui-components",
+  "version": "1.0.0",
+  "description": "A set of reusable open source ui component designed for any framework",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opensoftweb/ui-components.git"
+  },
+  "keywords": [
+    "opensoftweb",
+    "ui-components",
+    "components",
+    "react",
+    "vue",
+    "angular",
+    "laravel",
+    "html",
+    "storybooks"
+  ],
+  "author": "Emmanuel<Emmanuel@opensoftweb.org><Hello@opensoftweb.org>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/opensoftweb/ui-components/issues"
+  },
+  "homepage": "https://github.com/opensoftweb/ui-components#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@storybook/addon-actions": "^6.3.4",
+    "@storybook/addon-essentials": "^6.3.4",
+    "@storybook/addon-links": "6.3.4",
+    "@storybook/react": "^6.3.4",
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "@types/styled-components": "^5.1.11",
+    "babel-loader": "^8.2.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.0",
+    "typescript": "^4.3.5"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "dependencies": {}
+}
