@@ -1,0 +1,27 @@
+# Git configs
+.gitattributes text
+.gitignore text
+.gitconfig text
+
+# Other configs
+*.yaml text
+*.yml text
+.editorconfig text
+
+# Build config
+*.npmignore text
+
+# Documentation
+*.md text
+LICENSE text
+AUTHORS text
+
+# Treat as binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ttf binary
+*.eot binary
+*.woff binary
+*.gif binary
+*.ico binary
