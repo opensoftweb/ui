@@ -188,6 +188,18 @@ export const colors = {
     A400: "#00E5FF",
     A700: "#00B8D4",
   },
+
+  grays: {
+    100: "#f8f9fa",
+    200: "#e9ecef",
+    300: "#dee2e6",
+    400: "#ced4da",
+    500: "#adb5bd",
+    600: "#6c757d",
+    700: "#495057",
+    800: "#343a40",
+    900: "#212529",
+  },
 };
 
 export type Color = typeof colors;
