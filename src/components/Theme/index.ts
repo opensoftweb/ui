@@ -9,6 +9,7 @@ import { typography } from "./typography";
 import { zIndices } from "./zIndices";
 
 export const theme = {
+  name: "default",
   borders,
   borderWidths,
   breakpoints,
@@ -20,3 +21,5 @@ export const theme = {
   ...typography,
   zIndices,
 };
+
+export { borders, borderWidths, breakpoints, radii, colors, shadows, sizes, space, typography, zIndices };
