@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components/macro";
+import { colors } from "../Theme/colors";
 
 export interface IBadge {
   size?: string;
@@ -10,10 +11,11 @@ export interface IBadge {
   dot?: boolean;
   pill?: boolean;
   rounded?: boolean;
+  theme?: "primary" | "secondary" | "success" | "info" | "danger" | "warning" | "light" | "dark";
 }
 
 const buildStyles = (props: IBadge) => {
-  const { children, dot, position, size, pill, rounded } = props;
+  const { children, dot, position, size, pill, rounded, theme } = props;
   let styles: string[] = [];
   let positioned: string[] = [];
 
@@ -58,6 +60,38 @@ const buildStyles = (props: IBadge) => {
         break;
       default:
         return null;
+    }
+  }
+
+  if (theme) {
+    switch (theme) {
+      case "primary":
+        styles.push(`background-color: ${colors.primary};`);
+        break;
+      case "secondary":
+        styles.push(`background-color: ${colors.secondary};`);
+        break;
+      case "success":
+        styles.push(`background-color: ${colors.success};`);
+        break;
+      case "info":
+        styles.push(`background-color: ${colors.info};`);
+        break;
+      case "warning":
+        styles.push(`background-color: ${colors.warning};`);
+        break;
+      case "danger":
+        styles.push(`background-color: ${colors.danger};`);
+        break;
+      case "light":
+        styles.push(`background-color: ${colors.light};`);
+        break;
+      case "dark":
+        styles.push(`background-color: ${colors.dark};`);
+        break;
+
+      default:
+        break;
     }
   }
 
