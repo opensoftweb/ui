@@ -41,7 +41,7 @@ const LabelTemplate: Story<IAvatar> = () => {
         </Avatar>
         <Avatar rounded>F</Avatar>
       </Container>
-      
+
       <Container>
         <h4>Icon Avatars</h4>
         <Avatar xlarge>
@@ -73,6 +73,16 @@ const LabelTemplate: Story<IAvatar> = () => {
         <Avatar xlarge rounded image={ImageUrl} imageAlt="John Doe" />
         <Avatar large rounded image={ImageUrl} imageAlt="John Doe" />
         <Avatar rounded image={ImageUrl} imageAlt="John Doe" />
+      </Container>
+
+      <Container>
+        <h4>Avatar group</h4>
+        <AvatarGroup>
+          <Avatar xlarge rounded image={ImageUrl} imageAlt="John Doe" />
+          <Avatar large rounded image={ImageUrl} imageAlt="John Doe" />
+          <Avatar rounded image={ImageUrl} imageAlt="John Doe" />
+          <Avatar rounded>+6</Avatar>
+        </AvatarGroup>
       </Container>
     </>
   );

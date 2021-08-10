@@ -33,7 +33,10 @@ const BaseAvatarGroup = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: -1rem;
+  & > :nth-child(n + 2) {
+    margin-left: -1rem;
+    border: 2px solid #fff;
+  }
 `;
 
 const AvatarImage = styled.img`
