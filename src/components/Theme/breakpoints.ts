@@ -1,6 +1,6 @@
 /**
  * Define your breakpoints
- * using Bootstrap standard
+ * using some Bootstrap standard
  */
 export const breakpoints = {
   mobile: 479,
