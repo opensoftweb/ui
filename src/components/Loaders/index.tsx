@@ -6,6 +6,9 @@ export interface ILoader {
   overlayBg?: string;
   size?: string;
   bg?: string;
+  fontSize?: string;
+  color?: string;
+  text?: React.ReactNode;
 }
 
 const generateSize = (size: string) => {
@@ -65,6 +68,9 @@ const FourSmallBrickAnim = keyframes`
 `;
 
 const OverLay = styled.div<Pick<ILoader, "overlayBg">>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -73,7 +79,6 @@ const OverLay = styled.div<Pick<ILoader, "overlayBg">>`
   top: 0;
   bottom: 0;
   text-align: center;
-  line-height: 100vh;
   background-color: ${({ overlayBg }) => overlayBg ?? "rgba(0, 0, 0, 0.8)"};
   z-index: 999;
 `;
@@ -124,8 +129,15 @@ const FourthBlock = styled(BaseBlock)`
   animation: ${FourSmallBrickAnim} 1s linear infinite;
 `;
 
+const Text = styled.div<Pick<ILoader, "color" | "fontSize">>`
+  font-size: ${({ fontSize }) => fontSize ?? "16px"};
+  line-height: 1;
+  color: ${({ color }) => color ?? "#fff"};
+  margin: 15px auto;
+`;
+
 export const BrickLoaders = (props: ILoader) => {
-  const { size, bg, overlayBg } = props;
+  const { size, bg, overlayBg, text } = props;
 
   return (
     <OverLay overlayBg={overlayBg}>
@@ -136,6 +148,7 @@ export const BrickLoaders = (props: ILoader) => {
           <ThirdBlock size={size} bg={bg} />
           <FourthBlock size={size} bg={bg} />
         </LargestBlock>
+        <Text>{text}</Text>
       </Contents>
     </OverLay>
   );
